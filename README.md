@@ -4,14 +4,14 @@ requirements: cmake (and development essentials, of course)
 
 to build project:
 
-$ mkdir output_folder
-$ cd output_folder
-$ cmake path/to/cpp-playground
+`$ mkdir build
+$ cd build
+$ cmake ../src`
 
 now build with
 
-$ make
+`$ make`
 
 and run tests with
 
-$ make test
+`$ make test`
