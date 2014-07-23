@@ -4,9 +4,11 @@ requirements: cmake (and development essentials, of course)
 
 to build project:
 
-`$ mkdir build
+```
+$ mkdir build
 $ cd build
-$ cmake ../src`
+$ cmake ../src
+```
 
 now build with
 
