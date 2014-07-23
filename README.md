@@ -1,6 +1,9 @@
 playground project to test out cpp build tool chain
 
-requirements: cmake (and development essentials, of course)
+requirements: 
+* development essentials
+* cmake
+* gtest
 
 to build project:
 
@@ -17,3 +20,7 @@ now build with
 and run tests with
 
 `$ make test`
+
+each module test is executable itself, providing a lot more output:
+
+`$ ./test/modules/MyModuleTest`

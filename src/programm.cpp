@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string>
-#include "mymodule.h"
+#include "modules/mymodule.h"
 
 int main (int argc, char *argv[])
 {
