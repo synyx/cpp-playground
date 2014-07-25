@@ -4,7 +4,7 @@ requirements:
 * development essentials
 * cmake
 * gtest
-** download from https://code.google.com/p/googletest/downloads/list and extract to lib/ subfolder
+..* download from https://code.google.com/p/googletest/downloads/list and extract to lib/ subfolder
 
 to build project:
 
@@ -24,4 +24,4 @@ and run tests with
 
 each module test is executable itself, providing a lot more output:
 
-`$ ./test/modules/MyModuleTest`
+`$ MyModuleTest`
