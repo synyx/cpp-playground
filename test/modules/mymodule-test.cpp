@@ -1,5 +1,5 @@
 #include "../../src/modules/mymodule.h"
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 TEST (fooTest, SaysHelloWorld) { 
 	MyModule* myObject = new MyModule();

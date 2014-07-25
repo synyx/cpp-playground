@@ -4,6 +4,7 @@ requirements:
 * development essentials
 * cmake
 * gtest
+** download from https://code.google.com/p/googletest/downloads/list and extract to lib/ subfolder
 
 to build project:
 

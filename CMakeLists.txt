@@ -2,14 +2,24 @@ cmake_minimum_required (VERSION 2.6)
 project (cpp-playground)
 
 # project sources
-include_directories ("${PROJECT_SOURCE_DIR}/src")
-add_subdirectory (src) 
+add_library(MyModule src/modules/mymodule.cpp)
+
+install (TARGETS MyModule DESTINATION bin)
+install (FILES MyModule.h DESTINATION include)
+
+add_executable(cpp-playground src/programm.cpp)
+target_link_libraries (cpp-playground MyModule)
+
+# dependencies
+add_subdirectory (lib/gtest-1.7.0) 
+include_directories ("${PROJECT_SOURCE_DIR}/lib/gtest-1.7.0/include")
 
 # test sources
-include_directories ("${PROJECT_SOURCE_DIR}/test")
-add_subdirectory (test) 
+add_executable(MyModuleTest test/modules/mymodule-test.cpp)
+target_link_libraries (MyModuleTest MyModule)
+target_link_libraries (MyModuleTest gtest pthread)
 
 # ctest
 enable_testing ()
 
-add_test(MyModuleTest test/modules/MyModuleTest)
+add_test(MyModuleTest MyModuleTest)
