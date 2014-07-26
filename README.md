@@ -7,19 +7,9 @@ requirements:
 to build project:
 
 ```
-$ mkdir build
-$ cd build
-$ cmake ../src
+$ ./build.sh
 ```
-
-now build with
-
-`$ make`
-
-and run tests with
-
-`$ make test`
 
 each module test is executable itself, providing a lot more output:
 
-`$ MyModuleTest`
+`$ build/MyModuleTest`
