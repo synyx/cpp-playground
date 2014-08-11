@@ -3,16 +3,23 @@ project (cpp-playground)
 
 # project sources
 add_library(MyModule src/modules/mymodule.cpp)
+add_library(MyMultiplier src/modules/mymultiplier.cpp)
 add_library(MyCalculator src/modules/mycalculator.cpp)
 
 install (TARGETS MyModule DESTINATION bin)
 install (FILES MyModule.h DESTINATION include)
 
+install (TARGETS MyMultiplier DESTINATION bin)
+install (FILES MyMultiplier.h DESTINATION include)
+
 install (TARGETS MyCalculator DESTINATION bin)
 install (FILES MyCalculator.h DESTINATION include)
 
+target_link_libraries (MyCalculator MyMultiplier)
+
 add_executable(cpp-playground src/programm.cpp)
 target_link_libraries (cpp-playground MyModule)
+target_link_libraries (cpp-playground MyCalculator)
 
 # dependencies
 add_subdirectory (lib/gtest-1.7.0) 

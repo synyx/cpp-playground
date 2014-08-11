@@ -1,8 +1,11 @@
 #include "../../src/modules/mycalculator.h"
+#include "../../src/modules/mymultiplier.h"
 #include <gtest/gtest.h>
 
 TEST (addTest, AddsNumbers) { 
-    MyCalculator* myObject = new MyCalculator();
+    MyMultiplier* myMultiplier = new MyMultiplier();
+    MyCalculator* myObject = new MyCalculator(myMultiplier);
+
     double result = myObject->add(42, 1337);
 
     EXPECT_EQ (1379, result);

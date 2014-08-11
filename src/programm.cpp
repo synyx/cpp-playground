@@ -3,6 +3,8 @@
 #include <math.h>
 #include <string>
 #include "modules/mymodule.h"
+#include "modules/mymultiplier.h"
+#include "modules/mycalculator.h"
 
 int main (int argc, char *argv[])
 {
@@ -12,7 +14,12 @@ int main (int argc, char *argv[])
   std::string myStr = myObject->foo();
   myStr += "\n";
   
-  printf(myStr.c_str());  
+  printf(myStr.c_str());
+
+  MyMultiplier* myMultiplier = new MyMultiplier();
+  MyCalculator* myCalculator = new MyCalculator(myMultiplier);
+  
+  printf("%f\n", myCalculator->multiply(3.14, 42));
 
   return 0;
 }
