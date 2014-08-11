@@ -1,4 +1,5 @@
 build/
 nbproject/
 cppcheck-reports/
+coverage-reports/
 .DS_Store
