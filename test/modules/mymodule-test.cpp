@@ -5,7 +5,7 @@ TEST (fooTest, SaysHelloWorld) {
 	MyModule* myObject = new MyModule();
   	std::string myStr = myObject->foo();
 
-    EXPECT_EQ ("hello foobar", myStr);
+    EXPECT_EQ ("hello world", myStr);
 }
 
 int main(int argc, char **argv) {

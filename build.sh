@@ -16,7 +16,7 @@ rm -r build
 mkdir build
 cd build
 
-cmake ../
+c_make ../
 make
 
 # run tests
