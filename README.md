@@ -27,6 +27,8 @@ this requires...
 * cppchecker & sonar-runner need to be on the PATH
 * a sonarqube instance is expected to run at localhost:9000 
 
+==========
 
+cpp-playground is released under the MIT License. See the bundled LICENSE file for details
 
 
