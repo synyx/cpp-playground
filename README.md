@@ -1,5 +1,7 @@
 playground project to test out cpp build tool chain
 
+[![Build Status](https://travis-ci.org/wicked539/cpp-playground.svg?branch=master)](https://travis-ci.org/wicked539/cpp-playground)
+
 requirements: 
 * development essentials
 * cmake
@@ -25,8 +27,4 @@ $ ./sonar.sh
 
 this requires...
 * cppchecker & sonar-runner need to be on the PATH
-* a sonarqube instance is expected to run at localhost:9000 
-
-
-
-
+* a sonarqube instance is expected to run at localhost:9000
