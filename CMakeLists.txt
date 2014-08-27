@@ -32,8 +32,10 @@ add_test(MyModuleTest MyModuleTest)
 add_test(MyCalculatorTest MyCalculatorTest)
 
 # coverage
+find_program(GCOVR gcovr)
+
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
-if(CMAKE_COMPILER_IS_GNUCXX)
+if(CMAKE_COMPILER_IS_GNUCXX AND (NOT (${GCOVR} STREQUAL "GCOVR-NOTFOUND")))
     include(CodeCoverage)
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
