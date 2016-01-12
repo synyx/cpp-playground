@@ -1,6 +1,6 @@
 playground project to test out cpp build tool chain
 
-[![Build Status](https://travis-ci.org/wicked539/cpp-playground.svg?branch=master)](https://travis-ci.org/wicked539/cpp-playground)
+[![Build Status](https://travis-ci.org/synyx/cpp-playground.svg?branch=master)](https://travis-ci.org/synyx/cpp-playground)
 
 requirements: 
 * development essentials
