@@ -13,8 +13,8 @@ target_link_libraries (cpp-playground MyModule)
 target_link_libraries (cpp-playground MyCalculator)
 
 # dependencies
-add_subdirectory (lib/gtest-1.7.0) 
-include_directories ("${PROJECT_SOURCE_DIR}/lib/gtest-1.7.0/include")
+add_subdirectory (lib/googletest-release-1.7.0) 
+include_directories ("${PROJECT_SOURCE_DIR}/lib/googletest-release-1.7.0/include")
 
 # test sources
 add_executable(MyModuleTest test/modules/mymodule-test.cpp)

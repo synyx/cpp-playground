@@ -3,7 +3,7 @@
 # dependencies
 if [ ! -d "lib/gtest-1.7.0" ]; then
 	cd lib
-  	curl https://googletest.googlecode.com/files/gtest-1.7.0.zip -o gtest-1.7.0.zip
+  	curl -L https://github.com/google/googletest/archive/release-1.7.0.zip -o gtest-1.7.0.zip
   	unzip gtest-1.7.0.zip
   	rm gtest-1.7.0.zip
   	cd ..
