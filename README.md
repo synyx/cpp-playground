@@ -5,6 +5,7 @@ It contains of a very simple Application (Three classes and a main method), demo
 * Cross-plattform Makefile generation using CMake
 * Module unit testing using GTest
 * CI with travis-ci
+* Unit test code coverage reports with lcov
 * Static code analysis with Sonarqube
 * Memory leak analysis with valgrind
 
@@ -15,6 +16,7 @@ It contains of a very simple Application (Three classes and a main method), demo
 * CMake
 
 ##### Optional
+* lcov for HTML code coverage reports
 * cppcheck && sonar-runner for Sonar reports
 * valgrind for memory leak analysis
 

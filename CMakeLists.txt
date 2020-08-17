@@ -31,7 +31,19 @@ enable_testing ()
 add_test(MyModuleTest MyModuleTest)
 add_test(MyCalculatorTest MyCalculatorTest)
 
-# coverage
+# code coverage
+find_program(LCOV_PATH lcov)
+
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
+if(CMAKE_COMPILER_IS_GNUCXX AND (NOT (${LCOV_PATH} STREQUAL "LCOV_PATH-NOTFOUND")))
+    SET(CMAKE_CXX_FLAGS "-g -O0 --coverage")
+
+    include(CodeCoverageAggregate)
+    coverage_add_exec(MyModuleTest)
+    coverage_add_exec(MyCalculatorTest)
+endif()
+
+# old cobertura code coverage, TODO: fix or remove
 find_program(GCOVR gcovr)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)

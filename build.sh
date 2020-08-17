@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # dependencies
-if [ ! -d "lib/gtest-1.7.0" ]; then
+if [ ! -d "lib/googletest-release-1.7.0" ]; then
 	cd lib
   	curl -L https://github.com/google/googletest/archive/release-1.7.0.zip -o gtest-1.7.0.zip
   	unzip gtest-1.7.0.zip
@@ -19,5 +19,5 @@ cd build
 cmake ../ $1
 make
 
-# run tests
-make test
+# run tests with code coverage
+make cpp-playground_coverage
