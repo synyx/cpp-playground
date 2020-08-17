@@ -1,4 +1,4 @@
-// Kudos: https://github.com/bilke/cmake-modules/issues/8#issuecomment-252254260
+# Kudos: https://github.com/bilke/cmake-modules/issues/8#issuecomment-252254260
 
 FIND_PROGRAM( GENHTML_PATH genhtml )
 
