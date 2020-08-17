@@ -21,3 +21,8 @@ make
 
 # run tests with code coverage
 make cpp-playground_coverage
+
+# if code coverage report generation fails, run tests the old-fashioned way
+if [ $? == 2 ]; then
+	make test
+fi
