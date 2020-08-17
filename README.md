@@ -52,6 +52,22 @@ Then run
 
 This requires valgrind to be installed, of course
 
+#### Docker
+
+To set up a build environment in a docker container:
+
+```
+$ docker build -t cpp-playground .
+$ docker run -itv $(pwd):/workspace cpp-playground bash
+```
+
+Then you can run a build:
+
+```
+$ cd /workspace
+$ ./build.sh
+```
+
 ==========
 
 cpp-playground is released under the MIT License. See the bundled LICENSE file for details
